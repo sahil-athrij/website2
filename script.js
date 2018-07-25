@@ -5,7 +5,17 @@ function scrollVideo() {
 
         video.currentTime = (scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength;
         console.log((scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength)
-    }
+        var time = (scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength
+        element = document.getElementById("box");
+        var rect = element.getBoundingClientRect();
+        console.log(rect.top, rect.right, rect.bottom, rect.left);
+        if (rect.top <=0){
+            $(".box").css({'position' :'fixed' ,'bottom' : '60%'});
+        }
+       // else if (time < 0.952){
+           // $(".box").css({'position' :'absolute' ,'bottom' : '0'});
+      //  }
+}
     $(window).scroll(function(e) {
         scrollVideo();
     });
