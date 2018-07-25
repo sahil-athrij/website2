@@ -13,6 +13,7 @@ function scrollVideo() {
            // $(".box").css({'position' :'absolute' ,'bottom' : '0'});
       //  }
         document.getElementById("secc").style.display = "none";
+        var a = getElementById("con2").style.display = "none";
         if(time>1.3 && time<1.9)
         {
             document.getElementById("secc").style.display = "block"
@@ -21,7 +22,7 @@ function scrollVideo() {
 
         else if(time > 3.06 && time <3.80)
         {
-
+            a.style.display = "block";
         }
 
         else if(time>4.95 && time <5.55){
