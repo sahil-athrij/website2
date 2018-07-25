@@ -54,6 +54,7 @@
     background-size: cover;
     display: flex;
     opacity: 1;
+    display:none ;
 }
 
 .section3{
