@@ -1,28 +1,52 @@
+
+//if you are from cusat and you understand this please contact sahil athrij cs s5 or akul santhosh cs s5
+sct = $(document).scrollTop();
 function scrollVideo() {
-        var video = $('video').get(0),
-            videoLength = video.duration,
+        //var video = $('video').get(0),
+        //  videoLength = video.duration,
             scrollPosition = $(document).scrollTop();
 
-        video.currentTime = (scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength;
-        console.log((scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength);
-        var time = (scrollPosition *1.0/ ($(document).height() - $(window).height())) * videoLength;
-        element = document.getElementById("box");
-        var rect = element.getBoundingClientRect();
+        //var time = (scrollPosition / ($(document).height() - $(window).height())) * videoLength;
+        //video.currentTime = time;
+
 
        // else if (time < 0.952){
            // $(".box").css({'position' :'absolute' ,'bottom' : '0'});
       //  }
-        document.getElementById("secc").style.display = "none";
-        var a = getElementById("con2").style.display = "none";
-        if(time>1.3 && time<1.9)
-        {
-            document.getElementById("secc").style.display = "block"
 
+        console.log(top,scrollPosition);
+        if(stopped == "no" && sct-scrollPosition<0) {
+
+            if (displayed == "no") {
+                video.play();
+
+
+            }
+            else if (displayed2 == "no") {
+                video.play()
+            }
+
+            else if (displayed3 == "no") {
+                video.play()
+            }
+
+            else if (displayed4 == "no") {
+                video.play()
+            }
+        }
+        sct = scrollPosition;
+
+/*        if(time>1.3 && time<1.9)
+        {
+            if(displayed == "no") {
+                secc.style.opacity = 1;
+                displayed ="yes"
+            }
         }//show div 1
 
         else if(time > 3.06 && time <3.80)
         {
-            a.style.display = "block";
+
         }
 
         else if(time>4.95 && time <5.55){
@@ -32,7 +56,61 @@ function scrollVideo() {
         else if(time>6.6){
 
         }
+
+        else if(displayed == "yes"){
+            secc.style.opacity = 0;
+            displayed = "no";
+
+        }
+        */
 }
     $(window).scroll(function(e) {
+
         scrollVideo();
     });
+var stopped = "no";
+var displayed2 = "yes";
+var displayed3 = "yes";
+var displayed4 = "yes";
+var displayed = "no";
+var secc = document.getElementById("secc");
+
+var video = $('video').get(0);
+video.addEventListener("timeupdate", function(){
+    console.log(this.currentTime);
+    if(this.currentTime >= .3 && this.currentTime<=1){
+    }
+
+    else if(this.currentTime >= 1.3 && this.currentTime<=1.9) {
+
+        this.pause();
+        displayed = "yes";
+        displayed2 = "no";
+    }
+
+    else if(this.currentTime >= 3.2 && this.currentTime<=3.8){
+        this.pause();
+        displayed = "yes";
+        displayed2 = "yes";
+        displayed3 = "no";
+    }
+
+    else if(this.currentTime >= 5 && this.currentTime<=5.5){
+        this.pause();
+        displayed = "yes";
+        displayed2 = "yes";
+        displayed3 = "yes";
+        displayed4 = "no";
+    }
+
+    else if(this.currentTime >= 7.1){
+        this.pause();
+        displayed = "yes";
+        displayed2 = "yes";
+        displayed3 = "yes";
+        displayed4 = "yes";
+        stopped = "yes"
+    }
+});
+
+
