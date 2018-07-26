@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: #6f42c1;
+        }
+        .box{
+
+            font-family: sans-serif;
+            margin: auto;
+            text-align: left;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 80%;
+            height: 500px;
+            position: fixed;
+         font-size: 3em;
+            font-weight: 700;
+            background-color: #6f42c1;
+            color: white;
+
+        }
+        .textin{
+            border:none;
+            border-bottom: 2px solid white;
+            background-color: #6f42c1;
+            width: 300px;
+            font-size: 1em;
+            color: white;
+
+        }
+        .selectin{
+            background-color: #6f42c1;
+            font-size: 0.7em;
+            color: white;
+            border:2px solid white;
+        }
+        @media screen and (max-width:980px  ){
+             .box{
+                 font-size: 2em;
+             }
+        }
+        @media screen and (max-width:680px  ){
+            .box{
+                font-size: 1.5em;
+            }
+        }
+
+        @media screen and (max-width:400px  ){
+            .box{
+                font-size: 1em;
+            }
+        }
+
+
+    </style>
+
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <p class="boxtext">
+            My name is <input type="text" id ="mytext" placeholder="" class="textin"><br>
+            I am a<input type="text" id ="mytext" placeholder="" class="textin"> and <br> I'm interested in <select class="selectin">
+            <option value="she_coder">She coder</option>
+            <option value="code_faceoff">Code Faceoff</option>
+            <option value="trailblazer">Trailblazer</option>
+            <option value="doomsday">Doomsday</option>
+        </select>
+            <br> My e-mail ID is <input type="text" id ="mytext" placeholder="" class="textin">
+            
+        </p>
+    </div>
+
+</body>
+</html>
