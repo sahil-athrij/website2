@@ -110,7 +110,11 @@ video.addEventListener("timeupdate", function(){
         displayed3 = "yes";
         displayed4 = "yes";
         stopped = "yes"
+        $("#navbar").animate({
+          opacity:1,
+          
+        },1000)
     }
+
+
 });
-
-
