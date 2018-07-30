@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style2.css">
-
+    <link rel="stylesheet" type="text/css" href="popup.css">
 
 
 
@@ -21,9 +21,11 @@
     <img src="logo.svg" >
 </div>
 
- <button class="emailicon" id = "emailicon">
-     <img class="emailpng" src="email.png" >
-     <span>contact us</span>
+ <button class="emailicon" id = "emailicon" >
+     <div class="popup" onclick="pop()">
+         <img class="emailpng" src="email.png" >
+     <span class="popuptext" id = "myPopup" onclick="link()">Contact us</span>
+     </div>
  </button>
 
 
