@@ -109,7 +109,7 @@ video.addEventListener("timeupdate", function(){
         displayed2 = "yes";
         displayed3 = "yes";
         displayed4 = "yes";
-        stopped = "yes"
+        stopped = "yes";
         $("#navbar").animate({
           opacity:1,
           
@@ -117,4 +117,39 @@ video.addEventListener("timeupdate", function(){
     }
 
 
+});
+
+
+function deletediv(){
+    var del = document.getElementById("hider");
+    del.remove();
+    video.play();
+    video.pause();
+    $(".loading").animate({
+        opacity:1,
+
+    },1000);
+
+}
+
+video.addEventListener('loadeddata', function() {
+
+
+    video.pause();
+
+
+
+    $(".box").animate({
+        opacity:.75,
+
+    },1000);
+    $(".emailicon").animate({
+        opacity:1,
+
+    },1000);
+
+    $(".loading").animate({
+        opacity:0,
+
+    },1000)
 });
