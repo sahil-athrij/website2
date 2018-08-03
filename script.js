@@ -78,17 +78,20 @@ var secc = document.getElementById("secc");
 var video = $('video').get(0);
 video.addEventListener("timeupdate", function(){
     console.log(this.currentTime);
-    if(this.currentTime >= .3 && this.currentTime<=1){
+    if(this.currentTime >= .3 && this.currentTime<=.8){
     }
 
-    else if(this.currentTime >= 1.3 && this.currentTime<=1.9) {
+    else if(this.currentTime >= 1.3 && this.currentTime<=1.8) {
 
         this.pause();
         displayed = "yes";
         displayed2 = "no";
-    }
+        $("#secc").animate({
+            opacity:1,
 
-    else if(this.currentTime >= 3.2 && this.currentTime<=3.8){
+        })}
+
+    else if(this.currentTime >= 3.2 && this.currentTime<=3.6){
         this.pause();
         displayed = "yes";
         displayed2 = "yes";
@@ -118,6 +121,7 @@ video.addEventListener("timeupdate", function(){
 
 
 });
+
 
 
 function deletediv(){

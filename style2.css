@@ -1,7 +1,6 @@
 
 ul {
     opacity: 0;
-
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -9,6 +8,7 @@ ul {
     font-size: 33px;
     position: fixed;
     opacity: 0;
+    alignment: top;
     top: 0;
 }
 
@@ -40,8 +40,6 @@ li a:hover {
     position: fixed;
     left:90%;
     top:10%;
-
-
     margin-left:-25px; /* -1/2 width */
     margin-top:-25px; /* -1/2 height */
 
