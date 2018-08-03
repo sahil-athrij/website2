@@ -9,6 +9,7 @@ ul {
     position: fixed;
     opacity: 0;
     alignment: top;
+    text-orientation: inherit;
     top: 0;
 }
 
