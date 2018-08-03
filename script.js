@@ -1,15 +1,6 @@
 
 //if you are from cusat and you understand this please contact sahil athrij cs s5 or akul santhosh cs s5
 sct = $(document).scrollTop();
-
-function link(){
-    window.open('contact_us.html' , '_self')
-}
-function pop() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
-
 function scrollVideo() {
         //var video = $('video').get(0),
         //  videoLength = video.duration,
