@@ -22,12 +22,36 @@ function scrollVideo() {
 
 
             }
+
+
             else if (displayed2 == "no") {
-                video.play()
+                video.play();
+                if(secc1animate == 0) {
+
+                    $("#secc1").animate({
+                        top: "-20%",
+                        opacity:0
+
+
+                    }, 500);
+                    secc1animate = 2;
+
+                }
             }
 
             else if (displayed3 == "no") {
                 video.play()
+                if(secc2animate == 0) {
+
+                    $("#secc2").animate({
+                        top: "-20%",
+                        opacity:0
+
+
+                    }, 500);
+                    secc21animate = 2;
+
+                }
             }
 
             else if (displayed4 == "no") {
@@ -73,7 +97,13 @@ var displayed2 = "yes";
 var displayed3 = "yes";
 var displayed4 = "yes";
 var displayed = "no";
-var secc = document.getElementById("secc");
+
+var secc = document.getElementById("secc1");
+
+
+
+var secc1animate = 1;
+var secc2animate = 1;
 
 var video = $('video').get(0);
 video.addEventListener("timeupdate", function(){
@@ -81,24 +111,76 @@ video.addEventListener("timeupdate", function(){
     if(this.currentTime >= .3 && this.currentTime<=.8){
     }
 
-    else if(this.currentTime >= 1.3 && this.currentTime<=1.8) {
+
+    else if(this.currentTime >= 1.0 && this.currentTime<=1.4) {
+
+        if(secc1animate){
+            secc1animate = 0;
+            $("#secc1").animate({
+                top: "5%",
+                opacity:.75
+
+
+            }, 500);
+
+            $("#secc1").animate({
+                top: "15%",
+                opacity:1
+
+            }, 500);
+
+            $("#secc1").animate({
+                top: "10%",
+
+            }, 300);
+
+        }
+    }
+
+
+
+    else if(this.currentTime >= 1.4 && this.currentTime<=1.7) {
 
         this.pause();
         displayed = "yes";
         displayed2 = "no";
-        $("#secc").animate({
-            opacity:1,
+    }
 
-        })}
 
-    else if(this.currentTime >= 3.2 && this.currentTime<=3.6){
+
+    else if(this.currentTime >= 3.0 && this.currentTime<=3.3){
+        if(secc2animate){
+            secc2animate = 0;
+            $("#secc2").animate({
+                top: "5%",
+                opacity:.75
+
+
+            }, 500);
+
+            $("#secc2").animate({
+                top: "15%",
+                opacity:1
+
+            }, 500);
+
+            $("#secc2").animate({
+                top: "10%",
+
+            }, 300);
+
+        }
+
+    }
+
+    else if(this.currentTime >= 3.3 && this.currentTime<=3.6){
         this.pause();
         displayed = "yes";
         displayed2 = "yes";
         displayed3 = "no";
     }
 
-    else if(this.currentTime >= 5 && this.currentTime<=5.5){
+    else if(this.currentTime >= 5 && this.currentTime<=5.1){
         this.pause();
         displayed = "yes";
         displayed2 = "yes";
@@ -116,7 +198,24 @@ video.addEventListener("timeupdate", function(){
         $("#navbar").animate({
           opacity:1,
           
-        },1000)
+        },1000);
+
+        $("#clockdiv").animate({
+            top: "40%",
+            left:"+=20%"
+
+        }, 500);
+
+        $("#box").animate({
+            top: "-70%",
+            left: "-3%"
+
+        }, 500);
+
+
+
+
+
     }
 
 

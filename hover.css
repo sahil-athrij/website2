@@ -1,9 +1,9 @@
 /* Tooltip container */
 .tooltip {
-    position: absolute;
+    position: fixed;
     alignment: right;
     padding: 7px;
-    padding-left: 7px;
+    padding-left: 8px;
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
