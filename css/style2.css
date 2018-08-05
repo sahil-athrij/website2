@@ -165,8 +165,9 @@ li a:hover {
 
 .card {
     /* Add shadows to create the "card" effect */
+
+    width: 40%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     background-color: white;
 }
 
@@ -177,6 +178,7 @@ li a:hover {
 
 /* Add some padding inside the card container */
 .container {
+    color:black;
     padding: 2px 16px;
 }
 
