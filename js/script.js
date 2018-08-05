@@ -36,15 +36,16 @@ function scrollVideo() {
             }
 
             else if (displayed4 == "no") {
-                video.play()
+
 
                 if(secc3animate == 0) {
 
-                    removediv("#secc3","#landscape");
+                    removediv("#secc3","#clouds");
                     secc3animate = 2;
 
                 }
             }
+            video.play()
         }
         sct = scrollPosition;
 
@@ -114,10 +115,10 @@ video.addEventListener("timeupdate", function(){
         displayed3 = "no";
     }
 
-    else if(this.currentTime >= 4.7 && this.currentTime<=5.0){
+    else if(this.currentTime >= 4.6 && this.currentTime<=4.9){
         if(secc3animate){
             secc3animate = 0;
-            animatedivs("#secc3","#landscape")
+            animatedivs("#secc3","#clouds")
 
         }
 
@@ -226,10 +227,9 @@ function animatedivs(divid,imgid){
     $(imgid).animate({
         bottom:"0px",
         opacity:1,
-        transform: "rotate3d(0, 0, 1, 45deg)"
 
 
-    }, 500)
+    }, 800)
 
 
 }

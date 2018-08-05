@@ -185,7 +185,7 @@ li a:hover {
 }
 
 
-#landscape{
+.landscape{
     position: fixed;
     min-width: 100%;
 
