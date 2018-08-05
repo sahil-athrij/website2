@@ -29,7 +29,7 @@ function scrollVideo() {
                 video.play()
                 if(secc2animate == 0) {
 
-                    removediv("#secc2","#landscape");
+                    removediv("#secc2","#mountains");
                     secc21animate = 2;
 
                 }
@@ -102,7 +102,7 @@ video.addEventListener("timeupdate", function(){
     else if(this.currentTime >= 3.0 && this.currentTime<=3.3){
         if(secc2animate){
             secc2animate = 0;
-            animatedivs("#secc2","#landscape")
+            animatedivs("#secc2","#mountains")
 
         }
 
@@ -124,7 +124,7 @@ video.addEventListener("timeupdate", function(){
 
     }
 
-    else if(this.currentTime >= 5 && this.currentTime<=5.2){
+    else if(this.currentTime >= 5 && this.currentTime<=5.3){
         this.pause();
         displayed = "yes";
         displayed2 = "yes";
