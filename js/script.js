@@ -229,7 +229,7 @@ function animatedivs(divid,imgid){
         opacity:1,
 
 
-    }, 800)
+    }, 900)
 
 
 }
