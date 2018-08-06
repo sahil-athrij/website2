@@ -10,42 +10,47 @@ function scrollVideo() {
 
             if (displayed == "no") {
                 video.play();
+                if (secc1animate == 0) {
+                    removediv("#secc1", "#landscape");
+                    secc1animate = 2;
 
+                }
 
             }
 
 
             else if (displayed2 == "no") {
                 video.play();
+                if (secc2animate == 0) {
 
-                if(secc1animate == 0) {
-                    removediv("#secc1","#landscape");
-                    secc1animate = 2;
+                    removediv("#secc2", "#mountains");
+                    secc21animate = 2;
 
                 }
+
+
             }
 
             else if (displayed3 == "no") {
                 video.play()
-                if(secc2animate == 0) {
+                if (secc3animate == 0) {
 
-                    removediv("#secc2","#mountains");
-                    secc21animate = 2;
-
-                }
-            }
-
-            else if (displayed4 == "no") {
-
-
-                if(secc3animate == 0) {
-
-                    removediv("#secc3","#clouds");
+                    removediv("#secc3", "#clouds");
                     secc3animate = 2;
 
                 }
             }
-            video.play()
+
+
+            else if (displayed4 == "no") {
+                video.play()
+                if (secc4animate == 0) {
+
+                    removediv("#secc4", "#clouds");
+                    secc4animate = 2;
+
+                }
+            }
         }
         sct = scrollPosition;
 
@@ -70,7 +75,7 @@ var displayed = "no";
 var secc1animate = 1;
 var secc2animate = 1;
 var secc3animate = 1;
-
+var secc4animate = 1;
 
 var video = $('video').get(0);
 video.addEventListener("timeupdate", function(){
@@ -80,12 +85,13 @@ video.addEventListener("timeupdate", function(){
 
 
     else if(this.currentTime >= 1.0 && this.currentTime<=1.4) {
-
-        if(secc1animate){
-            secc1animate = 0;
-            animatedivs("#secc1","#landscape")
+        if(secc2animate){
+            secc2animate = 0;
+            animatedivs("#secc2","#mountains")
 
         }
+
+
     }
 
 
@@ -100,9 +106,9 @@ video.addEventListener("timeupdate", function(){
 
 
     else if(this.currentTime >= 3.0 && this.currentTime<=3.3){
-        if(secc2animate){
-            secc2animate = 0;
-            animatedivs("#secc2","#mountains")
+        if(secc3animate){
+            secc3animate = 0;
+            animatedivs("#secc3","#clouds")
 
         }
 
@@ -116,11 +122,12 @@ video.addEventListener("timeupdate", function(){
     }
 
     else if(this.currentTime >= 4.6 && this.currentTime<=4.9){
-        if(secc3animate){
-            secc3animate = 0;
-            animatedivs("#secc3","#clouds")
+        if(secc4animate){
+            secc4animate = 0;
+            animatedivs("#secc4","#clouds")
 
         }
+
 
     }
 
@@ -146,14 +153,14 @@ video.addEventListener("timeupdate", function(){
         },1000);
 
         $("#clockdiv").animate({
-            top: "40%",
-            left:"+=20%"
+            top: "60%",
 
         }, 500);
 
         $("#box").animate({
-            top: "-70%",
-            left: "-3%"
+            opacity:.8,
+            height:'250px',
+            width:'250px'
 
         }, 500);
 
@@ -169,14 +176,51 @@ video.addEventListener("timeupdate", function(){
 
 
 function deletediv(){
-    var del = document.getElementById("hider");
+    var del = document.getElementById("begin");
     del.remove();
+
+    $('#logo').animate({
+        width:"70%",
+        height:"70%",
+        opacity:0
+
+    },400,function () {
+        del = document.getElementById("logo");
+        del.remove();
+
+    });
+
+
+    $('#hider').animate({
+
+        opacity:0
+
+    },500,function () {
+        del = document.getElementById("hider");
+        del.remove();
+
+    });
+
+
+    //del.remove();
     video.play();
     video.pause();
     $(".loading").animate({
         opacity:1,
 
     },1000);
+
+
+    if(secc1animate){
+        secc1animate = 0;
+        animatedivs("#secc1","#landscape")
+
+    }
+
+
+    $('.emailpng').animate({
+        opacity:1
+    })
 
 }
 
@@ -187,10 +231,6 @@ video.addEventListener('loadeddata', function() {
 
 
 
-    $(".box").animate({
-        opacity:.75,
-
-    },1000);
     $(".emailicon").animate({
         opacity:1,
 
@@ -205,23 +245,25 @@ video.addEventListener('loadeddata', function() {
 
 function animatedivs(divid,imgid){
 
-    $(divid).animate({
-        top: "15%",
-        opacity:.75
+    if (screen.width >= 600) {
+        $(divid).animate({
+            top: "40%",
+            opacity:1
 
 
-    }, 500);
+        }, 800);
 
-    $(divid).animate({
-        top: "10%",
-        opacity:1
+    }
+    else {
+        $(divid).animate({
+            opacity:1
 
-    }, 500);
 
-    $(divid).animate({
-        top: "12%",
+        }, 800);
+    }
 
-    }, 300);
+
+
 
 
     $(imgid).animate({

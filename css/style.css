@@ -1,11 +1,18 @@
 
- html {
+
+
+
+html {
      height:100%;
  }
 body {
-    font-family: 'Roboto',sans-serif;
+    font-family: "Comfortaa";
     height: 40000px;
 }
+
+
+
+
 video {
     position: fixed;
     left: 50%;
@@ -19,29 +26,17 @@ video {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    -moz-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    z-index: 99;
-    font-family: HelveticaNeue, Helvetica, sans-serif;
-    font-size:8vmin;
-    text-align:center;
-    color: white;
-}
+
 
 .box{
     opacity: 0;
-    width: 250px;
-    height: 250px;
+    width: 700px;
+    height: 700px;
     position: fixed;
     left:0 ;
     right: 0;
     bottom: 0;
-    top:  -150%;
+    top: -60%;
     margin: auto;
 
 
@@ -50,56 +45,30 @@ h1 {
 }
 
 .section2{
+    opacity: 0;
     margin: 0;
     padding: 0;
-    opacity:0;
+
     position:fixed;
-    top:-40%;
-    background-image: url("../img/notice1.png");
+    top:35%;
+    /*background-image: url("../img/notice1.png");*/
     background-size: cover;
     display:inline;
     left: 50%;
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
+    font-size: 30px;
+    width:70%;
 
-    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
+
+
+   /* background: linear-gradient(to top, rgba(0,0,0,.5), rgba(255,255,255,0));*/
+
 
 
 }
 
-.section3{
-    margin: 0;
-    padding: 0;
-    opacity:0;
-    position:fixed;
-    top:-40%;
-    background-image: url("../img/notice2.png");
-    background-size: cover;
-    display:inline;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
 
-    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
-
-   
-}
-
-.section4{
-    margin: 0;
-    padding: 0;
-    opacity:0;
-    position:fixed;
-    top:-40%;
-    background-image: url("../img/notice3.png");
-    background-size: cover;
-    display:inline;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-
-    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
-}
 
 .left{
     margin: 0;
@@ -107,13 +76,15 @@ h1 {
     height: 100%;
     width: 90%;
     /*background-color: black;*/
-    opacity: 1;
+
     color: white;
-    text-align: justify;
+    text-align: center;
     position: relative;
     left:50%;
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
+
+
 
 
 
@@ -135,6 +106,68 @@ h3{
     text-align: center;
     opacity: 2;
 }
-p{
-    opacity: 2;
-}
+
+
+
+ @media only screen and (max-width: 600px) {
+     body {
+
+     }
+
+
+     .section2{
+         margin: 0;
+         padding: 0;
+         opacity:0;
+         position:fixed;
+         top:20%;
+         /*background-image: url("../img/notice1.png");*/
+         background-size: cover;
+         display:inline;
+         left: 50%;
+         -moz-transform: translateX(-50%);
+         transform: translateX(-50%);
+         width:100%;
+         font-size: 25px;
+
+
+     }
+
+
+     #clockdiv{
+         top:-20%;
+         position: fixed;
+         left: 50%;
+         margin-left: -300px;
+         color: #fff;
+         display: inline-block;
+         font-weight: 100;
+         text-align: center;
+         font-size: 40px;
+
+
+
+     }
+
+     #clockdiv > div{
+
+
+         padding: 10px;
+         border-radius: 3px;
+         background: clear;
+         display: inline-block;
+     }
+
+     #clockdiv div > span{
+         padding: 15px;
+         border-radius: 3px;
+         display: inline-block;
+     }
+
+     .smalltext{
+         opacity: 1;
+         padding-top: 5px;
+
+     }
+
+ }

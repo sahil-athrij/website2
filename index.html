@@ -7,25 +7,27 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style4.css">
     <link rel="stylesheet" type="text/css" href="css/hover.css">
+
 
 
 </head>
 <body>
 
- <div class="box" id = "box">
-    <img src="img/logo.svg" >
-</div>
+
+    <img class  = 'box' id ='box' src="img/logo.svg" >
 
 
- <div class="tooltip" align="right"><img class="emailpng" src="img/email.png" align="right">
-     <span class="tooltiptext">Tooltip text</span>
- </div>
+    <img class="emailpng" src="img/email.png" onclick = opencontact() {
+
+         }>
 
  <img src="img/02.gif" class="loading">
 
@@ -37,72 +39,67 @@
 
 <!--Video ends here-->
 
- <img class = "landscape" id = "landscape"  src = img/vector1.svg>
+ <div class = "landscape" id = "landscape" ></div>
  <img class = "landscape" id = "clouds" src = img/location3.png>
  <img class = "landscape" id = "mountains" src = img/location2.png>
 
 
  <div class="car" id="hider">
-     <button class="button default" onclick="deletediv()">PLAY</button>
+     <img src="img/logo.svg" onclick="deletediv()"  id = 'logo'>
+     <p class="button default" id = "begin">CLICK HERE TO BEGIN</p>
  </div>
 
 
 
  <div class="section2" id = "secc1">
-     <h2 id = "intro">INTRO</h2>
      <div class="left">
 
+         <p >
+                A Journey That Began From Nowhere<br><br>
+                From The Stone Cold Darkness<br><br>
+                To A Destination Beyond Imagination
+         </p>
+     </div>
+
+ </div>
+
+
+
+
+
+
+
+ <div class="section2" id = "secc2">
+     <div class="left">
+         <p>Stand Mesmerised As Dhishna Weaves Marvels<br><br>
+             Open Your Eyes To The Order Arising From Chaos.
+         </p>
+
+     </div>
+ </div>
+
+ <div class="section2" id = "secc3">
+     <div class="left">
          <p>
-                 A journey that began from nowhere, from the stone cold darkness, one step, two steps, to a destination beyond imagination.
-                 Stand mesmerised as Dhishna weaves marvels out of nothing. Open your eyes to the order arising from chaos.
+             From Sticks And Stones<br><br>
+             To Flights And Drones<br><br>
+             Ideas Floating in Freefall.
          </p>
      </div>
-
  </div>
 
 
-
-
-
- <div class="section3" id = "secc2">
-
-     <h2 id = "about">ABOUT US</h2>
+ <div class="section2" id = "secc4">
      <div class="left">
-         <p>Dhishna is the annual techfest of School Of Engineering,CUSAT. A myriad of events,mind boggling games,a cornucopia of challenges and competitions,exciting prizes and above all,an adventure that shouldn't be missed ! The 7 specialized branches of School Of Engineering,CUSAT merge together their talents,resources and hardwork,the building blocks for Dhishna. Breaking the usual norms of studies confined to textbooks,we aim to take learning to a whole new level. The perfect platform to launch your rockets,encompass your minds and explore the different niches of technology. Encouraging each and everyone of you,to step up,mould your thoughts and lives in your unique way,discover the tech lover in you ! We present to you, Dhishna.From sticks and stones, to flights and drones,
-             Let Dhishna parachute your ideas through free fall.
-
-             A journey towards the best, a voyage that never ends..
-
-             DHISHNA
+         <p>
+             A Journey Towards The Best<br><br>
+             A Voyage That Never Ends..
          </p>
-
-     </div>
- </div>
-
- <div class="section4" id = "secc3">
-     <div class="left">
-         <h2 id = 'events'>PRE-EVENTS</h2>
-         <div class="card" href="/make-a-ton">
-             <img src="img/img8.jpg" alt="Avatar" style="width:100%" onclick="makeathon()">
-             <div class="container">
-                 <h4><b>make-a-ton</b></h4>
-                 <p>A 24 hr hackathon</p>
-             </div>
-         </div>
      </div>
  </div>
 
 
 
-
- <div>
-
-<ul id = "navbar">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-</div>
 
 
 
@@ -125,6 +122,11 @@
      </div>
  </div>
 
+    <div id = 'contactus'>
+    <iframe src = 'contact_us.html' id = "cont">
+
+    </iframe>
+    </div>
 
  <script type="text/javascript" src="js/script.js"></script>
  <script type="text/javascript" src="js/script2.js"></script>

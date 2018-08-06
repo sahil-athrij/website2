@@ -4,3 +4,15 @@ function makeathon() {
 
 
 }
+
+
+
+function opencontact() {
+
+    document.getElementById('contactus').style.zIndex = 1;
+
+    $('#contactus').animate({
+        opacity:1,
+    })
+
+}
