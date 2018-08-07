@@ -1,0 +1,12 @@
+
+.left p{
+	background-color: black;
+	padding: 40px;
+	opacity: 0.5;
+	border-radius: 10px;
+}
+
+#sec2_underlay{
+	background-color: unset;
+	opacity: 1;
+}
