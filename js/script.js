@@ -1,5 +1,23 @@
 
+
+
 //if you are from cusat and you understand this please contact sahil athrij cs s5 or akul santhosh cs s5
+
+
+
+var config = {
+    apiKey: "AIzaSyAZHCLuovX2oNhccuxjetkHNgAcrWcZLGo",
+    authDomain: "dhisna-ac7e0.firebaseapp.com",
+    databaseURL: "https://dhisna-ac7e0.firebaseio.com",
+    projectId: "dhisna-ac7e0",
+    storageBucket: "dhisna-ac7e0.appspot.com",
+    messagingSenderId: "1079389260336"
+};
+firebase.initializeApp(config);
+
+
+var database = firebase.database();
+
 sct = $(document).scrollTop();
 function scrollVideo() {
 
@@ -164,6 +182,10 @@ video.addEventListener("timeupdate", function(){
 
         }, 500);
 
+        $('.scroll').animate({
+            opacity:0
+        });
+
 
 
 
@@ -222,6 +244,11 @@ function deletediv(){
         opacity:1
     });
 
+    $('.scroll').animate({
+        opacity:.7
+    });
+
+
     stopped = "no";
 
 }
@@ -256,6 +283,7 @@ function animatedivs(divid,imgid){
     }
 
 
+    addBlur();
 
 
 
@@ -285,4 +313,21 @@ function removediv(divid,imgid) {
 
     }, 500);
 
+    removeBlur();
+
+}
+
+function addBlur()
+{
+
+    $('video').css("-webkit-filter" ,"blur(5px) brightness(85%)");
+    $('video').css("-moz-filter" ,"blur(5px)");
+    $('video').css("-ms-filter" ,"blur(5px)");
+
+}
+
+function removeBlur(){
+    $('video').css("-webkit-filter" ,"blur(0px) brightness(100%)");
+    $('video').css("-moz-filter" ,"blur(0px)");
+    $('video').css("-ms-filter" ,"blur(0px)");
 }
