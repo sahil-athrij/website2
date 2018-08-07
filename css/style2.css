@@ -197,4 +197,6 @@ li a:hover {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
 
+    filter: brightness(85%);
+
 }
