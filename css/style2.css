@@ -76,7 +76,6 @@ li a:hover {
 }
 
 .button {
-    font-family: Helvetica, Roboto;
     position: relative;
     left:50%;
     top:70%;
@@ -109,6 +108,7 @@ li a:hover {
     background-size: cover;
     margin-left: -100px; /* -1/2 width */
     margin-top: -100px;
+    opacity: 0;
 }
 
 
@@ -127,7 +127,7 @@ li a:hover {
 
 
 #clockdiv{
-    top:-20%;
+    top:120%;
     position: fixed;
     left: 50%;
     margin-left: -300px;

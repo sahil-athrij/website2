@@ -63,7 +63,7 @@ $(window).scroll(function(e) {
 });
 
 
-var stopped = "no";
+var stopped = "yes";
 var displayed2 = "yes";
 var displayed3 = "yes";
 var displayed4 = "yes";
@@ -131,7 +131,7 @@ video.addEventListener("timeupdate", function(){
 
     }
 
-    else if(this.currentTime >= 5 && this.currentTime<=5.3){
+    else if(this.currentTime >= 5 && this.currentTime<=5.2){
         this.pause();
         displayed = "yes";
         displayed2 = "yes";
@@ -176,6 +176,7 @@ video.addEventListener("timeupdate", function(){
 
 
 function deletediv(){
+
     var del = document.getElementById("begin");
     del.remove();
 
@@ -203,7 +204,6 @@ function deletediv(){
 
 
     //del.remove();
-    video.play();
     video.pause();
     $(".loading").animate({
         opacity:1,
@@ -220,7 +220,9 @@ function deletediv(){
 
     $('.emailpng').animate({
         opacity:1
-    })
+    });
+
+    stopped = "no";
 
 }
 
@@ -231,15 +233,6 @@ video.addEventListener('loadeddata', function() {
 
 
 
-    $(".emailicon").animate({
-        opacity:1,
-
-    },1000);
-
-    $(".loading").animate({
-        opacity:0,
-
-    },1000)
 });
 
 
