@@ -1,5 +1,15 @@
 
 
+var config = {
+    apiKey: "AIzaSyAZHCLuovX2oNhccuxjetkHNgAcrWcZLGo",
+    authDomain: "dhisna-ac7e0.firebaseapp.com",
+    databaseURL: "https://dhisna-ac7e0.firebaseio.com",
+    projectId: "dhisna-ac7e0",
+    storageBucket: "dhisna-ac7e0.appspot.com",
+    messagingSenderId: "1079389260336"
+};
+firebase.initializeApp(config);
+
 
 
 
@@ -12,30 +22,8 @@ function makeathon() {
 
 
 
-function opencontact() {
-    stopped="yes";
-
-    document.getElementById('contactus').style.zIndex = 1;
-
-    $('#contactus').animate({
-        opacity:1,
-    })
-
-}
-
-function closecontact() {
-
-    stopped="no";
 
 
-    $('#contactus').animate({
-        opacity:0,
-    },500,function () {
-
-        document.getElementById('contactus').style.zIndex = -101;
-    })
-
-}
 
 
 
@@ -52,12 +40,11 @@ function makeid() {
 
 function writeUserData() {
 
-    var iframe = document.getElementById('cont').contentWindow.document;
-    var name = iframe.getElementById('name').value;
+    var name = document.getElementById('name').value;
     console.log(name);
-    var message = iframe.getElementById('message').value;
-    var mail = iframe.getElementById('email').value;
-    database.ref("messages/landing/"+makeid()).update({
+    var message = document.getElementById('message').value;
+    var mail = document.getElementById('email').value;
+    firebase.database().ref("messages/landing/"+makeid()).update({
         email: mail,
         Name: name,
         Message: message,
@@ -66,7 +53,6 @@ function writeUserData() {
 
     alert("message sent");
 
-    closecontact();
 }
 
 

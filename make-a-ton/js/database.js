@@ -11,7 +11,6 @@ var config = {
 firebase.initializeApp(config);
 
 
-var database = firebase.database();
 
 
 function makeid() {
@@ -28,7 +27,7 @@ function writeUserData() {
     var name = document.getElementById('name').value;
     var message = document.getElementById('message').value;
     var mail = document.getElementById('email').value;
-    database.ref("messages/hackathon/"+makeid()).update({
+    firebase.database.ref("messages/hackathon/"+makeid()).update({
         email: mail,
         Name: name,
         Message: message,

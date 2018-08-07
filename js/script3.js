@@ -1,12 +1,27 @@
-function addBlur()
-{
-$('video').css("-webkit-filter" ,"blur(5px)");
-$('video').css("-moz-filter" ,"blur(5px)");
-$('video').css("-ms-filter" ,"blur(5px)");
+
+
+function opencontact() {
+    stopped="yes";
+
+    document.getElementById('contactus').style.zIndex = 1;
+
+    $('#contactus').animate({
+        opacity:1,
+    })
+
 }
 
-function removeBlur(){
-$('video').css("-webkit-filter" ,"blur(0px)");
-$('video').css("-moz-filter" ,"blur(0px)");
-$('video').css("-ms-filter" ,"blur(0px)");
+
+function closecontact() {
+
+    stopped="no";
+
+
+    $('#contactus').animate({
+        opacity:0,
+    },500,function () {
+
+        document.getElementById('contactus').style.zIndex = -101;
+    })
+
 }

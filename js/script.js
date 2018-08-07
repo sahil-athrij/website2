@@ -5,18 +5,7 @@
 
 
 
-var config = {
-    apiKey: "AIzaSyAZHCLuovX2oNhccuxjetkHNgAcrWcZLGo",
-    authDomain: "dhisna-ac7e0.firebaseapp.com",
-    databaseURL: "https://dhisna-ac7e0.firebaseio.com",
-    projectId: "dhisna-ac7e0",
-    storageBucket: "dhisna-ac7e0.appspot.com",
-    messagingSenderId: "1079389260336"
-};
-firebase.initializeApp(config);
 
-
-var database = firebase.database();
 
 sct = $(document).scrollTop();
 function scrollVideo() {
