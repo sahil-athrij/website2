@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: #6f42c1;
+        }
+        .box{
+
+            font-family: sans-serif;
+            margin: auto;
+            text-align: left;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            width: 80%;
+            height: 500px;
+            font-size: 3em;
+            font-weight: 700;
+          line-height: 100px;
+            background-color: #6f42c1;
+            color: white;
+
+        }
+        .textin{
+            border:none;
+            border-bottom: 2px solid white;
+            background-color: #6f42c1;
+            width: 300px;
+            font-size: 1em;
+            color: white;
+            border-right: 30px;
+
+        }
+        .selectin{
+            background-color: #6f42c1;
+            font-size: 1em;
+            color: white;
+            border:none;
+            border-bottom:2px solid white;
+            
+        }
+        .close_button{
+          position: absolute;
+          right: 10px;
+          padding: 10px;
+          font-size: 2em;
+          color: white;
+          border: 2px solid white;
+          border-radius:10px;
+          margin-right: 10px;
+
+        }
+         .close_button:hover{
+                background-color: white;
+                color: #6f42c1;
+             }
+
+        @media screen and (max-width:980px  ){
+             .box{
+                 font-size: 2em;
+                 line-height: 70px;
+                 width: 90%;
+
+             }
+             .close_button{
+                font-size: 1.5em;
+             }
+            
+        }
+        @media screen and (max-width:680px  ){
+            .box{
+                font-size: 1.5em;
+                line-height: 50px;
+            }
+            .textin{
+                width: 90%;
+            }
+            .close_button{
+                font-size: 1em;
+             }
+        }
+
+        @media screen and (max-width:400px  ){
+            .box{
+                font-size: 1em;
+            }
+        }
+
+
+    </style>
+
+    <title>Title</title>
+</head>
+<body>
+    <div class="close_button">Back</div>
+    <div class="box">      
+        <p class="boxtext">
+            My name is &nbsp;&nbsp;&nbsp;<input type="text" id ="mytext" placeholder="your name" class="textin"><br>
+            I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id ="mytext" placeholder="eg.student" class="textin">and<br> I'm interested in <select class="selectin">
+            <option value="she_coder">She coder</option>
+            <option value="code_faceoff">Code Faceoff</option>
+            <option value="trailblazer">Trailblazer</option>
+            <option value="doomsday">Doomsday</option>
+        </select>
+            <br> My e-mail ID is <input type="text" id ="mytext" placeholder="your Mail Id" class="textin">
+            
+        </p>
+    </div>
+
+</body>
+</html>
