@@ -262,6 +262,8 @@ function animatedivs(divid,imgid){
 
         }, 800);
 
+        addBlur();
+
     }
     else {
         $(divid).animate({
@@ -272,7 +274,7 @@ function animatedivs(divid,imgid){
     }
 
 
-    addBlur();
+
 
 
 
@@ -302,7 +304,9 @@ function removediv(divid,imgid) {
 
     }, 500);
 
-    removeBlur();
+    if (screen.width >= 600) {
+        removeBlur();
+    }
 
 }
 
