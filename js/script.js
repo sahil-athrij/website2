@@ -215,6 +215,7 @@ function deletediv(){
 
 
     //del.remove();
+    video.play();
     video.pause();
     $(".loading").animate({
         opacity:1,
