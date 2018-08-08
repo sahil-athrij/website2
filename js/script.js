@@ -156,7 +156,7 @@ video.addEventListener("timeupdate", function(){
 
         $("#navbar").animate({
           opacity:1,
-          
+
         },1000);
 
         $("#clockdiv").animate({
@@ -248,6 +248,8 @@ video.addEventListener('loadeddata', function() {
 
     video.pause();
 
+    $('.background').remove();
+
 
 
 });
@@ -306,7 +308,7 @@ function removediv(divid,imgid) {
     }, 500);
 
     if (screen.width >= 600) {
-        removeBlur();
+      removeBlur();
     }
 
 }
