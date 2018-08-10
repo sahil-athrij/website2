@@ -188,9 +188,6 @@ video.addEventListener("timeupdate", function(){
 
 function deletediv(){
 
-    var del = document.getElementById("begin");
-    del.remove();
-
     $('#logo').animate({
         width:"70%",
         height:"70%",
