@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="js/database.js" type="text/javascript"></script>
 	<script type="text/javascript">
+
+
+
+
 		var ua = navigator.userAgent.toLowerCase(); 
 		if (ua.indexOf('safari') != -1) 
 		{ 
@@ -155,10 +159,12 @@
 						<p class="sec6_alpha_feedback">
 							Kindly let us know if you need us to provide you with any further details.
 						</p>
+						<div>
 							My name is<input type="text" id ="name" class="textin" placeholder="Enter your name"><br>
             			My message is <input type="text" id ="message" class="textin" placeholder="Enter your message">
             			<br> My e-mail ID is<input type="text"  id ="email" class="textin" placeholder="Enter Your Email Id"><br><br>
-            			<button onclick="writeUserData()">Send</button>
+            			<button  class="button" onclick="writeUserData()">Send</button>
+						</div>
 					</div>
 			</div>
 
@@ -189,8 +195,5 @@
 	});
 
 </script>
-
-
-<script src="js/database.js" type="text/javascript"></script>
 </body>
 </html>

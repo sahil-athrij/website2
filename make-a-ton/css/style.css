@@ -365,32 +365,47 @@ h1{
   position: absolute;
   width: 70%;
   height: 80%;
-  background-color: white;
+  background-color: #FF9118;
   left: 20%;
   top: 10%;
 
 }
 .sec6_alpha_feedback{
-  color: black;
+  color: white;
   padding:20px;
+  font-size: 1.5em;
+   text-align: center;
 }
-.sec6_alpha_contents form{
-  color: black;
+.sec6_alpha_contents div{
+  color: white;
   padding: 20px;
-  font-size: 1em;
+  font-size: 1.9em;
   line-height: 40px;
+    letter-spacing: 3px;
+     text-align: center;
+
 }
 .sec6_alpha_contents input{
   border: none;
-  border-bottom: 2px solid grey;
+  background-color: unset;
+  /*border-bottom: 2px solid white;*/
+ text-align: center;
   width: 100%;
   font-size: 1em;
-  color: grey;
+  color: white;
 }
-button{
+.button{
   width: 100px;
   height: 50px;
-  border-radius: 100px;
+ border-radius: 10px;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 10px;
+}
+.button:hover{
+  background-color: white;
+  color: #FF9118;
+
 }
 /********************************************************/
 /*styling desktop*/
@@ -494,6 +509,18 @@ button{
     position: static;
     width: 90%;
   }
+  .sec6_alpha_feedback{
+    font-size: 1em;
+    text-align: center;
+  }
+  .sec6_alpha_contents form{
+    text-align: center;
+      line-height: 40px;
+  }
+  .sec6_alpha_contents input{
+    text-align: center;
+  }
+
 }
 /*tablet width ends*/
 /*mobile width*/
@@ -590,6 +617,9 @@ button{
  .sec6_beta{
   display: none;
  }
+ .sec6_alpha_contents input{
+    line-height: 30px;
+  }
 }
 /*mobile width ends*/
 @media only screen and (min-width: 1050px) {
